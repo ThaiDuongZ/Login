@@ -98,13 +98,20 @@ html {
 }
 
 .login__content--box > label {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     padding: 10px 0;
     font-size: 16px;
+    color: #fff; */
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
     color: #fff;
-
+    /* pointer-events: none; */
+    transition: .5s;
+    position: absolute;
 }
 
 
@@ -133,20 +140,28 @@ html {
 
 .login__content--box > input:focus {
     outline: none;
-    
+
 }
 
 input:focus ~ label, input:valid ~ label{
-    animation: label_top ease 0.5s ;
-    animation-fill-mode: both;
+    /* animation: label_top ease 0.5s ;
+    animation-fill-mode: both; */
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
 }
 
-/* .login__content--box:hover ~ label{
-    animation: label_top ease 0.5s ;
-    animation-fill-mode: forwards;
-} */
+.login__content--box:hover ~ label{
+    /* animation: label_top ease 0.5s ;
+    animation-fill-mode: forwards; */
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
 
-@keyframes label_top{
+/* @keyframes label_top{
     from{
         transform: translateY(0);
     }
@@ -155,5 +170,5 @@ input:focus ~ label, input:valid ~ label{
         font-size: 12px;
         color: #03e9f4;
     }
-}
+} */
 
